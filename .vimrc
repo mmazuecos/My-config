@@ -8,6 +8,12 @@ set shiftwidth=4
 set incsearch
 set hlsearch
 
+"===========PLUGINS ==============
+"----NERDTree----
+"NERDTree on startup if no filename is given
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 set autoindent
 set textwidth=80
 set number
@@ -25,3 +31,5 @@ filetype indent on
 :map <C-e> :q <enter>
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch <enter>
+execute pathogen#infect()
+call pathogen#helptags()
