@@ -1,8 +1,14 @@
-# My-.vimrc
-My .vimrc. Here just for not loosing it. Keep in mind that I use dvorak-intl keyboard layout.
+# **My-config**
+My .vimrc and my .Xmodmap. Here just for not loosing them. Keep in mind that I use dvorak-intl keyboard layout.
 
+
+### .vimrc
+Some settings for my vim. Tabs, indent and some mappings. Very basic rigth now.
 
 The colorscheme used is [here](https://github.com/encody/vim-colors) (hope it remains there).
+
+### .Xmodmap
+Currently, this swaps the left ctrl key and the caps lock key.
 
 
 >##### _Dear me of the future:_
