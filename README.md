@@ -3,11 +3,13 @@ My .vimrc and my .Xmodmap. Here just for not loosing them. Keep in mind that I u
 
 
 ### .vimrc
-Some settings for my vim. Tabs, indent and some mappings. Very basic rigth now.
+Some settings for my vim. Tabs, indent and some mappings. Very basic right now.
 
 ###### Requisites
 + [apt-vim](https://github.com/egalpin/apt-vim) (for installing plugins)
 + [NERDTree](https://github.com/scrooloose/nerdtree)
++ [vim-airline](https://github.com/vim-airline/vim-airline)
++ [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
 + The colorscheme used is [here](https://github.com/encody/vim-colors) (optional).
 
 ### .Xmodmap
