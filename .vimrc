@@ -38,9 +38,9 @@ filetype indent on
 :map <C-o> :w <enter>
 :map <C-x> :x <enter>
 :map <C-e> :q <enter> 
+:map <C-h> :q! <enter>
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch <enter>
 nnoremap <leader><Tab> :NERDTree <enter>
-   
 execute pathogen#infect()
 call pathogen#helptags()
