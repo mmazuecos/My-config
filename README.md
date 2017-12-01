@@ -11,6 +11,7 @@ Some settings for my vim. Tabs, indent and some mappings. Very basic right now.
 + [vim-airline](https://github.com/vim-airline/vim-airline)
 + [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
 + [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
++ [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 + The colorscheme used is [here](https://github.com/encody/vim-colors) (optional).
 
 ### .Xmodmap
