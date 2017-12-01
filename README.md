@@ -10,6 +10,7 @@ Some settings for my vim. Tabs, indent and some mappings. Very basic right now.
 + [NERDTree](https://github.com/scrooloose/nerdtree)
 + [vim-airline](https://github.com/vim-airline/vim-airline)
 + [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
++ [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 + The colorscheme used is [here](https://github.com/encody/vim-colors) (optional).
 
 ### .Xmodmap

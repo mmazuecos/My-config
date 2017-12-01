@@ -42,5 +42,7 @@ filetype indent on
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch <enter>
 nnoremap <leader><Tab> :NERDTree <enter>
+" once copied, it can be pasted multiple times
+xnoremap p pgvy
 execute pathogen#infect()
 call pathogen#helptags()
