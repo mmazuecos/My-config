@@ -13,6 +13,7 @@ Some settings for my vim. Tabs, indent and some mappings. Very basic right now.
 + [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 + [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 + The colorscheme used is [here](https://github.com/encody/vim-colors) (optional).
++ Currently using [this] (https://github.com/NLKNguyen/papercolor-theme) 
 
 ### .Xmodmap
 Currently, this swaps the left ctrl key and the caps lock key.

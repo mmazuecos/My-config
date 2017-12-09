@@ -17,7 +17,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 set laststatus=2 "airline always on
 set ttimeoutlen=10 "fast leave of insert mode
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'base16color'
+let g:airline_theme='papercolor'
+"let g:airline_theme = 'base16color'
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_theme = 'dark'
 "let g:airline_theme = 'base16_isotope'
@@ -29,7 +30,10 @@ set number
 set showcmd
 set lazyredraw
 set showmatch       " Highligth matching parenthesis-like chars
-colorscheme lyla
+set t_Co=256
+set background=light
+colorscheme PaperColor
+"colorscheme lyla
 set cursorline      " highligth current line
 filetype indent on
 
