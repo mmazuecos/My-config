@@ -15,8 +15,8 @@ Some settings for my vim. Tabs, indent and some mappings. Very basic right now.
 
 ##### Possible color schemes
 + [Lyla](https://github.com/encody/vim-colors) (optional).
-+ [Papercolor] (https://github.com/NLKNguyen/papercolor-theme) 
-+ [Solarized] (https://github.com/altercation/vim-colors-solarized)
++ [Papercolor](https://github.com/NLKNguyen/papercolor-theme) 
++ [Solarized](https://github.com/altercation/vim-colors-solarized)
 
 ### .Xmodmap
 Currently, this swaps the left ctrl key and the caps lock key.
