@@ -8,6 +8,7 @@ fi
 
 curl -sL https://raw.githubusercontent.com/egalpin/apt-vim/master/install.sh | sh;
 
+source ~/.bashrc || source ~/.bash_profile' or 'source ~/.zshrc
 apt-vim init;
 apt-vim install -y https://github.com/scrooloose/nerdtree.git;
 apt-vim install -y https://github.com/vim-airline/vim-airline.git; 

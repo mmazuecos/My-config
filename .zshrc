@@ -82,7 +82,27 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Load the theme.
 #antigen theme robbyrussell
 antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
-
+#BULLETTRAIN_PROMPT_ORDER=(git context dir time)
+BULLETTRAIN_PROMPT_ORDER=(
+    custom
+    context
+    dir
+    git
+    screen
+    #perl
+    #ruby
+    virtualenv
+    time
+    status
+    nvm
+    aws
+    go
+    elixir
+    hg
+    #cmd_exec_time
+)
+BULLETTRAIN_PROMPT_CHAR="(UwU)"
+BULLETTRAIN_CONTEXT_BG=green
 
 # Tell Antigen that you're done.
 antigen apply
