@@ -8,7 +8,7 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+ZSH_THEME=""
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -81,28 +81,68 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
 #antigen theme robbyrussell
-antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
-#BULLETTRAIN_PROMPT_ORDER=(git context dir time)
-BULLETTRAIN_PROMPT_ORDER=(
-    custom
-    context
-    dir
-    git
-    screen
-    #perl
-    #ruby
-    virtualenv
-    time
-    status
-    nvm
-    aws
-    go
-    elixir
-    hg
-    #cmd_exec_time
+
+# uncomment to use bullet-train theme
+    #antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+    #BULLETTRAIN_PROMPT_ORDER=(git context dir time)
+    #BULLETTRAIN_PROMPT_ORDER=(
+    #    custom
+    #    context
+    #    dir
+    #    git
+    #    screen
+    #    #perl
+    #    #ruby
+    #    virtualenv
+    #    time
+    #    status
+    #    nvm
+    #    aws
+    #    go
+    #    elixir
+    #    hg
+    #    #cmd_exec_time
+    #)
+    #BULLETTRAIN_PROMPT_CHAR="(UwU)"
+    #BULLETTRAIN_CONTEXT_BG=green
+
+# uncomment to use spaceship-prompt theme
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stampts section
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  hg            # Mercurial section (hg_branch  + hg_status)
+  package       # Package version
+  node          # Node.js section
+  ruby          # Ruby section
+  elixir        # Elixir section
+  xcode         # Xcode section
+  swift         # Swift section
+  golang        # Go section
+  php           # PHP section
+  rust          # Rust section
+  haskell       # Haskell Stack section
+  julia         # Julia section
+  docker        # Docker section
+  aws           # Amazon Web Services section
+  venv          # virtualenv section
+  conda         # conda virtualenv section
+  pyenv         # Pyenv section
+  dotnet        # .NET section
+  ember         # Ember.js section
+  kubecontext   # Kubectl context section
+  exec_time     # Execution time
+  line_sep      # Line break
+  battery       # Battery level and status
+  vi_mode       # Vi-mode indicator
+  jobs          # Backgound jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
 )
-BULLETTRAIN_PROMPT_CHAR="(UwU)"
-BULLETTRAIN_CONTEXT_BG=green
+SPACESHIP_CHAR_SYMBOL="(UwU)"
 
 # Tell Antigen that you're done.
 antigen apply
@@ -136,3 +176,9 @@ antigen apply
 alias zshconfig="vim ~/.zshrc"
 alias no='ls'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH="/home/mauri/anaconda3/bin:$PATH"
+
+# conda tabcompletion
+fpath+=$PWD/conda-zsh-completion
+compinit conda
