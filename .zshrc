@@ -75,6 +75,7 @@ antigen bundle heroku
 antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
+antigen bundle jump
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -103,13 +104,12 @@ antigen bundle zsh-users/zsh-syntax-highlighting
     #    hg
     #    #cmd_exec_time
     #)
-    #BULLETTRAIN_PROMPT_CHAR="(UwU)"
+    #BULLETTRAIN_PROMPT_CHAR="(UwU) "
     #BULLETTRAIN_CONTEXT_BG=green
 
 # uncomment to use spaceship-prompt theme
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 SPACESHIP_PROMPT_ORDER=(
-  time          # Time stampts section
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
@@ -135,6 +135,7 @@ SPACESHIP_PROMPT_ORDER=(
   ember         # Ember.js section
   kubecontext   # Kubectl context section
   exec_time     # Execution time
+  time          # Time stampts section
   line_sep      # Line break
   battery       # Battery level and status
   vi_mode       # Vi-mode indicator
@@ -142,7 +143,9 @@ SPACESHIP_PROMPT_ORDER=(
   exit_code     # Exit code section
   char          # Prompt character
 )
-SPACESHIP_CHAR_SYMBOL="(UwU)"
+SPACESHIP_CHAR_SYMBOL="(UwU) "
+SPACESHIP_USER_SHOW="always"
+SPACESHIP_TIME_SHOW="true"
 
 # Tell Antigen that you're done.
 antigen apply
@@ -179,6 +182,27 @@ alias no='ls'
 
 export PATH="/home/mauri/anaconda3/bin:$PATH"
 
-# conda tabcompletion
-fpath+=$PWD/conda-zsh-completion
-compinit conda
+dvreceive() {
+    port=6537;
+    echo "Waiting for files...";
+    nc -l -p $port | tar -zx;
+}
+
+dvsend () {
+    if [ $# -lt 2 ]
+    then
+        echo "dvsend <destination> <files>"
+        return 1
+    fi
+    dest=$1 
+    shift
+    if tar -zc "$@" | nc $dest 6537
+    then
+        echo "Successfully sent files"
+    else
+        echo "Error sending files. Is the destination listening?"
+        return 1
+    fi
+}
+
+export PATH="/home/mauri/miniconda3/bin:$PATH"
