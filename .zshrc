@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/mauri/.oh-my-zsh
+  export ZSH=/home/maury/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -122,23 +122,16 @@ SPACESHIP_PROMPT_ORDER=(
   xcode         # Xcode section
   swift         # Swift section
   golang        # Go section
-  php           # PHP section
-  rust          # Rust section
-  haskell       # Haskell Stack section
-  julia         # Julia section
   docker        # Docker section
   aws           # Amazon Web Services section
   venv          # virtualenv section
   conda         # conda virtualenv section
-  pyenv         # Pyenv section
+  python         # Python
   dotnet        # .NET section
-  ember         # Ember.js section
-  kubecontext   # Kubectl context section
   exec_time     # Execution time
   time          # Time stampts section
   line_sep      # Line break
   battery       # Battery level and status
-  vi_mode       # Vi-mode indicator
   jobs          # Backgound jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
@@ -180,7 +173,7 @@ alias zshconfig="vim ~/.zshrc"
 alias no='ls'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="/home/mauri/anaconda3/bin:$PATH"
+export PATH="/home/maury/anaconda3/bin:$PATH"
 
 dvreceive() {
     port=6537;
@@ -205,4 +198,20 @@ dvsend () {
     fi
 }
 
-export PATH="/home/mauri/miniconda3/bin:$PATH"
+# export PATH="/home/maury/miniconda3/bin:$PATH"  # commented out by conda initialize
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/maury/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/maury/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/maury/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/maury/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
